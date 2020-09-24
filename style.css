@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+.wrapper {
+    margin: 100px auto;
+    max-width: 700px;
+    height: 700px;
+    padding: 60px;
+    background-color:white;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 50%;
+    box-shadow: 0 0 30px white;
+    gap: 10px;
+}
+
+/* TIMER */
+
+.timer {
+    height: 280px;
+    text-align: center;
+    color: black;
+    font-size: 10em;
+    text-shadow:  
+        0 0 2px #000000,
+        -19px 39px 1px #c8c8c8,
+        -20px 41px 1px #cbcbcb,
+        -21px 43px 1px #d2d2d2,
+        -22px 45px 1px #d5d5d5, 
+        -23px 47px 1px #e2e2e2,
+        -24px 49px 1px #e6e6e6,
+        -25px 51px 1px #eaeaea,
+        -26px 53px 1px #efefef;
+}
+
+/* BUTTONS */
+
+.btn {
+    margin: 0 auto;
+    height: 170px;
+    transition: all .3s ease .1s;
+ }
+.btn-border {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/256/938/non_2x/vector-elegant-dotted-halftone-background-illustration.jpg);
+    background-position: 35% 65%;
+    background-size: 200px;
+    cursor: pointer;
+    width: 140px;
+    margin: 0;
+    border: 6px inset #202020;
+    border-radius: 50%;
+    box-shadow: 
+        -5px 13px 2px #c8c8c8,    
+        -8px 20px 2px #202020,
+        -15px 35px 3px #3e3e3e,
+        -10px 25px 3px 1px #c8c8c8;
+}
+.btn-border:active {
+    transform: scale(0.9);
+    transition: all .5s ease .1s;
+    box-shadow: 
+        -4px 13px 2px #c8c8c8,    
+        -3px 20px 2px #202020,
+        -8px 35px 3px #3e3e3e,
+        -5px 25px 3px 1px #c8c8c8;
+}
+.reset {
+    margin: 10px 0 10px 10px;
+    padding: 23px;
+}
+.start {
+    margin: 10px;
+    padding: 25px;
+}
+.pause {
+    padding: 25px;
+    margin: 10px;
+}
+.btn-on {
+    border-color: #ff6ec7;
+    transform: scale(0.95);
+    padding: 30px;
+    box-shadow: 
+        0 0 2px #ff6ec7,
+        -6px 13px 2px #c8c8c8,    
+        -5px 20px 2px #202020,
+        -12px 35px 3px #3e3e3e,
+        -8px 25px 3px 1px #c8c8c8;
+}
+
+
+/* DARK MODE */
+
+
+/* Button */
+
+.dark-mode-btn {
+    width: 60px;
+    background-color: white;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    margin: 0;
+    border: 3px inset white;
+    border-radius: 50%;
+}
+.dark-mode .dark-mode-btn {
+    border: 2px inset #00fff2;
+    box-shadow: 0 0 10px 1px #00fff2;
+}
+
+/* Theme */
+
+body.dark-mode  {
+    background-color: rgba(0, 0, 0, 0.882);
+}
+.dark-mode .wrapper {
+    background-color: black;
+    box-shadow: 0 0 30px rgb(255, 251, 251);
+}
+.dark-mode .timer {
+    color: black;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.635);
+}
+.dark-mode .btn-border {
+    border-color: white;
+    box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.416);
+}
+.dark-mode .btn-border:active {
+    transform: none; 
+}
+.dark-mode .btn-on {
+    border: 3px inset #00fff2;
+    transform: scale(1.2);
+    background-size: 300px;
+    background-position: 40% 62%;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 10px #00fff2; 
+    padding: 15px;
+}
+.dark-mode .reset.btn-on {
+    transform: rotate(360deg) scale(1.2);
+    transition: all .4s ease .1s;
+}
+.dark-mode .glow{
+    -webkit-animation: glow 1s ease-in-out infinite;
+    -moz-animation: glow 1s ease-in-out infinite;
+    animation: glow 1s ease-in-out infinite;
+}
+@-webkit-keyframes glow {
+ from {
+  color: #fff;
+text-shadow: 0 0 5px #00fff2, 0 0 10px #00fff2, 0 0 15px #00fff2, 0 0 20px #00fff2, 0 0 25px #00fff2, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 45px #00fff2;
+}
+
+to {
+ color: rgb(0, 0, 0);
+text-shadow: 0 0 10px #00fff2, 0 0 15px #00fff2, 0 0 20px #00fff2, 0 0 25px #00fff2, 0 0 30px #00fff2, 0 0 35px #00fff2, 0 0 40px #00fff2, 0 1 45px #00fff2;
+}
+}
